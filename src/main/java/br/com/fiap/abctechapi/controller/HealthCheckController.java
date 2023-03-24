@@ -28,6 +28,6 @@ public class HealthCheckController {
 
         properties.load(is);
 
-        return ResponseEntity.ok(properties.getProperty("name") + " - "  + properties.getProperty("version"));
+        return ResponseEntity.ok(properties.getProperty("build_name") + " - "  + properties.getProperty("build_version"));
     }
 }
