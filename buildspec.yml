@@ -11,7 +11,7 @@ phases:
     commands:
       - echo "Pos building"
       - mv target/*.war ./ROOT.war
-  artifacts:
-    commands:
-      files:
-        - ROOT.war
+artifacts:
+  commands:
+    files:
+      - ROOT.war
