@@ -8,7 +8,8 @@ spring:
     datasource:
         password: ${DB_PASSWORD}
         username: ${DB_USERNAME}
-        url: jdbc://mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+        url: jdbc:mysql://${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}
+        driver-class-name: com.mysql.jdbc.Driver
     jpa:
         hibernate: 
             ddl-auto: create
