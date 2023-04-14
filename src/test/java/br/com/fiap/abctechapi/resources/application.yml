@@ -7,3 +7,6 @@ spring:
         password: 
         username: sa
         url: jdbc:h2:mem:abc_tech
+    flyway:
+        enabled: false
+    
