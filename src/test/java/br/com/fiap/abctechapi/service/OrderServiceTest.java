@@ -55,4 +55,11 @@ public class OrderServiceTest {
       Assertions.assertThrows(MaximumAssistException.class, () -> orderService.saveOrder(newOrder, List.of(1L, 2L, 3L, 4L, 5L,6L, 7L, 1L, 2L, 3L, 4L, 5L,6L, 7L, 1L,2L)));
       Mockito.verify(orderRepository, Mockito.times(0)).save(newOrder);
     }
+
+    @Test
+    public void create_order() {
+      Order order = new Order();
+      order.setOperatorId(1234L);
+      Mockito.verify(orderRepository, Mockito.times(0)).save(order);
+    }
 }
