@@ -17,12 +17,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class OrderLocationDto {
 
-    @Negative
-    @Positive
+   
     private  Double latitude;
 
-    @Negative
-    @Positive
+  
     private Double longitude;
 
     @PastOrPresent
