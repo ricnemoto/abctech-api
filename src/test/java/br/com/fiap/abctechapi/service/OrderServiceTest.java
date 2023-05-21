@@ -60,6 +60,7 @@ public class OrderServiceTest {
     public void create_order() {
       Order order = new Order();
       order.setOperatorId(1234L);
-      Mockito.verify(orderRepository, Mockito.times(0)).save(order);
+      Assertions.assertDoesNotThrow(() -> orderService.saveOrder(order, List.of(1L)));
+      Mockito.verify(orderRepository, Mockito.times(1)).save(order);
     }
 }
